@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#!/usr/bin/perl
 
 # PODNAME: reorder-tsv
 # ABSTRACT: Reorder columns of TSV file by template
