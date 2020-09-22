@@ -26,7 +26,8 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "0"
+            "ExtUtils::MakeMaker" : "0",
+            "perl" : "5.006"
          }
       },
       "develop" : {
@@ -52,6 +53,7 @@
             "IO::Uncompress::Gunzip" : "0",
             "Pod::Usage" : "0",
             "autodie" : "0",
+            "perl" : "5.008",
             "strictures" : "2"
          }
       },
@@ -66,6 +68,7 @@
             "File::Spec" : "0",
             "Test::Exception" : "0",
             "Test::More" : "0",
+            "perl" : "5.008",
             "strict" : "0",
             "warnings" : "0"
          }
@@ -74,14 +77,24 @@
    "provides" : {
       "App::Reorder::TSV" : {
          "file" : "lib/App/Reorder/TSV.pm",
-         "version" : "v0.1.0"
+         "version" : "v0.1.1"
       }
    },
    "release_status" : "stable",
-   "version" : "0.1.0",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/iansealy/perl-App-Reorder-TSV/issues"
+      },
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/iansealy/perl-App-Reorder-TSV.git",
+         "web" : "https://github.com/iansealy/perl-App-Reorder-TSV"
+      }
+   },
+   "version" : "0.1.1",
    "x_Dist_Zilla" : {
       "perl" : {
-         "version" : "5.028003"
+         "version" : "5.030000"
       },
       "plugins" : [
          {
@@ -355,7 +368,7 @@
                   "meta_noindex" : 1
                },
                "Dist::Zilla::Role::ModuleMetadata" : {
-                  "Module::Metadata" : "1.000037",
+                  "Module::Metadata" : "1.000036",
                   "version" : "0.006"
                }
             },
@@ -396,6 +409,16 @@
             "class" : "Dist::Zilla::Plugin::UploadToCPAN",
             "name" : "UploadToCPAN",
             "version" : "6.015"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::GitHub::Meta",
+            "name" : "GitHub::Meta",
+            "version" : "0.47"
+         },
+         {
+            "class" : "Dist::Zilla::Plugin::MinimumPerl",
+            "name" : "MinimumPerl",
+            "version" : "1.006"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",
@@ -461,7 +484,7 @@
          "version" : "6.015"
       }
    },
-   "x_generated_by_perl" : "v5.28.3",
+   "x_generated_by_perl" : "v5.30.0",
    "x_serialization_backend" : "Cpanel::JSON::XS version 4.23",
    "x_spdx_expression" : "GPL-3.0-only"
 }
